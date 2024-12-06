@@ -40,7 +40,10 @@ public class PremiumPassenger {
         for (int i = 0; i<activity.getLocation().getActivityList().size(); i++) {
             Activity currentActivity = activity.getLocation().getActivityList().get(i);
             for (int j = 0; j<currentActivity.getGuestList().size(); j++){
-                if (currentActivity.getGuestList().get(j).equals(passenger)) hasActivity=true;
+                if (currentActivity.getGuestList().get(j).equals(passenger)) {
+                    hasActivity = true;
+                    break;
+                }
             }
         }
         boolean isFull = (activity.getGuestList().size()== activity.getCapacity());

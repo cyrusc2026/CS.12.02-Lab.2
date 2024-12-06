@@ -72,8 +72,8 @@ public class Activity {
 
 
     public boolean checkPassenger(PremiumPassenger passenger){
-        for (int i =0; i < guestList.size(); i++){
-            if (guestList.get(i).equals(passenger)) return true;
+        for (PremiumPassenger premiumPassenger : guestList) {
+            if (premiumPassenger.equals(passenger)) return true;
             //checks if the passenger is the same passenger as required
         }
         return false;

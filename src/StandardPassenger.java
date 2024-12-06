@@ -35,7 +35,10 @@ public class StandardPassenger extends PremiumPassenger{
         for (int i = 0; i<activity.getLocation().getActivityList().size(); i++) {
             Activity currentActivity = activity.getLocation().getActivityList().get(i);
             for (int j = 0; j<currentActivity.getGuestList().size(); j++){
-                if (currentActivity.getGuestList().get(j).equals(passenger)) hasActivity=true;
+                if (currentActivity.getGuestList().get(j).equals(passenger)) {
+                    hasActivity = true;
+                    break;
+                }
             }
             //checks if the user has already signed up for an activity
         }

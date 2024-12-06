@@ -28,8 +28,8 @@ public class Destination {
     public void addActivity(Activity activity) {activityList.add(activity);}
     //allows activity to be added without creating new ArrayList with setActivityList
     public Activity checkPassenger(PremiumPassenger passenger){
-        for (int i = 0; i < activityList.size(); i++){
-            if (activityList.get(i).checkPassenger(passenger)) return activityList.get(i);
+        for (Activity activity : activityList) {
+            if (activity.checkPassenger(passenger)) return activity;
             //returns the Activity so that it can be used in other methods (instead of the specific index because it doesn't really help the user)
         }
         return null; //no Activity
